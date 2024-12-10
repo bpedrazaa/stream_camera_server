@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  camera_stream:
+    build:
+      context: .
+    ports:
+      - "6001:6001"
+    env_file: .env
+    restart: ${RESTART_POLICY}
